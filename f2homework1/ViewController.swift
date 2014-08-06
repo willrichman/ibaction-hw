@@ -24,5 +24,15 @@ class ViewController: UIViewController {
         println("Hello, world!!")
     }
 
+    @IBOutlet weak var scrambStatus: UISwitch!
+    
+    @IBAction func scrambulator(sender: AnyObject) {
+        if scrambStatus.on {
+            println("Scrambulator on!")
+        }
+        else {
+            println("Scrambulator off!")
+        }
+    }
 }
 

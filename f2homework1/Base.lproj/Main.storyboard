@@ -28,6 +28,9 @@
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Iym-o6-Fmv">
                                 <rect key="frame" x="276" y="200" width="51" height="31"/>
+                                <connections>
+                                    <action selector="scrambulator:" destination="BYZ-38-t0r" eventType="valueChanged" id="GYZ-n1-0Qc"/>
+                                </connections>
                             </switch>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RLv-LC-XzD">
                                 <rect key="frame" x="143" y="285" width="315" height="31"/>
@@ -43,6 +46,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="scrambStatus" destination="Iym-o6-Fmv" id="a70-kz-pDT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
