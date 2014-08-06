@@ -38,11 +38,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var extravagance: UISlider!
     
     @IBAction func extravagantize(sender: AnyObject) {
-        if extravagance.value > 0.5 {
-            println("Capaciously fancified.")
-        }
-        else if extravagance.value > 0.75 {
+        if extravagance.value > 0.75 {
             println("Well met, in honorificabilitudinitatibus, my bedizened associate")
+        }
+        else if extravagance.value > 0.5 {
+            println("Capaciously fancified.")
         }
     }
     
