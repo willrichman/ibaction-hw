@@ -48,6 +48,9 @@
                                 <state key="normal" title="DON'T PRESS THIS!!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="OMU-ZU-A4d" kind="show" identifier="pressedThis" id="zvw-TK-0CK"/>
+                                </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Iym-o6-Fmv">
                                 <rect key="frame" x="276" y="207" width="51" height="31"/>
@@ -72,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="304" y="343"/>
+            <point key="canvasLocation" x="312" y="337"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3i4-Cz-gXO">
@@ -85,12 +88,21 @@
                     <view key="view" contentMode="scaleToFill" id="aXc-QR-wGn">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ndgba.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="L44-mA-xta">
+                                <rect key="frame" x="0.0" y="39" width="600" height="476"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <keyCommands/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ib-7O-cKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="304" y="1015"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ndgba.jpg" width="680" height="511"/>
+    </resources>
 </document>
