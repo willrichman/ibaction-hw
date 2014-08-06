@@ -26,8 +26,12 @@
                                     <action selector="helloButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wMp-iE-oRC"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RLv-LC-XzD">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RLv-LC-XzD">
                                 <rect key="frame" x="143" y="365" width="315" height="31"/>
+                                <connections>
+                                    <action selector="extravagantize:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="f7T-a4-Rqw"/>
+                                    <action selector="extravagantize:" destination="BYZ-38-t0r" eventType="valueChanged" id="jei-D4-fjW"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scrambulator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Umw-YE-Bn2">
                                 <rect key="frame" x="224" y="178" width="145" height="21"/>
@@ -37,7 +41,7 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="17" height="11"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgS-no-AU8">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgS-no-AU8">
                                 <rect key="frame" x="226" y="495" width="149" height="32"/>
                                 <color key="backgroundColor" red="1" green="0.025564295550000001" blue="0.038321037510000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="15"/>
@@ -45,33 +49,48 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Extravagantize" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cUk-so-cO9">
-                                <rect key="frame" x="232" y="324" width="137" height="33"/>
-                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="22"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                            </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Iym-o6-Fmv">
                                 <rect key="frame" x="276" y="207" width="51" height="31"/>
                                 <connections>
                                     <action selector="scrambulator:" destination="BYZ-38-t0r" eventType="valueChanged" id="GYZ-n1-0Qc"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Extravagantize" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cUk-so-cO9">
+                                <rect key="frame" x="232" y="334" width="137" height="33"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="jgS-no-AU8" firstAttribute="centerX" secondItem="RLv-LC-XzD" secondAttribute="centerX" id="LQK-Ia-13h"/>
-                            <constraint firstItem="jgS-no-AU8" firstAttribute="centerX" secondItem="cUk-so-cO9" secondAttribute="centerX" id="LwA-GK-Etc"/>
-                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="extravagance" destination="RLv-LC-XzD" id="NaA-vt-bVd"/>
                         <outlet property="scrambStatus" destination="Iym-o6-Fmv" id="a70-kz-pDT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="304" y="343"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3i4-Cz-gXO">
+            <objects>
+                <viewController id="OMU-ZU-A4d" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qFR-WY-V9H"/>
+                        <viewControllerLayoutGuide type="bottom" id="wcl-fi-Pb2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aXc-QR-wGn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ib-7O-cKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304" y="1015"/>
         </scene>
     </scenes>
 </document>
