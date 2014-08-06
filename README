@@ -1,0 +1,10 @@
+This is an exercise done as homework for Code Fellows' Foundation II: iOS Development class.  The instructions were as below:
+
+1) Create a new single view application in Xcode
+2) Add a button in the storyboard that logs a message to the console when it is tapped.
+3) Add a UISwitch to your view controller and println() a message to the console when it is toggled.
+4) Add a UISlider to your view controller and println() a message to the console with the current slider value, but only when the value is greater than 0.5
+
+Challenge:
+
+Add a second view controller, and a second button. Use a segue to present the second view controller when the button is tapped.
