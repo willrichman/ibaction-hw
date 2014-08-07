@@ -32,10 +32,11 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func extravadrag(sender: UISlider) {
-        if sender.value > 0.75 {
+    @IBAction func extravadrag(sender: AnyObject) {
+        let slider = sender as UISlider
+        if slider.value > 0.75 {
             println("Well met, in honorificabilitudinitatibus, my bedizened associate")
-        } else if sender.value > 0.5 {
+        } else if slider.value > 0.5 {
             println("Capaciously fancified.")
         }
     }
