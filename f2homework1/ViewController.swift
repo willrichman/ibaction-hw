@@ -23,26 +23,21 @@ class ViewController: UIViewController {
     @IBAction func helloButton(sender: UIButton) {
         println("Hello, world!!")
     }
-
-    @IBOutlet weak var scrambStatus: UISwitch!
     
-    @IBAction func scrambulator(sender: AnyObject) {
-        if scrambStatus.on {
+    @IBAction func scrambulator(sender: UISwitch) {
+        if sender.on {
             println("Scrambulator on!")
         } else {
             println("Scrambulator off!")
         }
     }
     
-    @IBOutlet weak var extravagance: UISlider!
-    
-    @IBAction func extravadrag(sender: AnyObject) {
-        if extravagance.value > 0.75 {
+    @IBAction func extravadrag(sender: UISlider) {
+        if sender.value > 0.75 {
             println("Well met, in honorificabilitudinitatibus, my bedizened associate")
-        } else if extravagance.value > 0.5 {
+        } else if sender.value > 0.5 {
             println("Capaciously fancified.")
         }
     }
     
 }
-
