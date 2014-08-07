@@ -29,19 +29,17 @@ class ViewController: UIViewController {
     @IBAction func scrambulator(sender: AnyObject) {
         if scrambStatus.on {
             println("Scrambulator on!")
-        }
-        else {
+        } else {
             println("Scrambulator off!")
         }
     }
     
     @IBOutlet weak var extravagance: UISlider!
     
-    @IBAction func extravagantize(sender: AnyObject) {
+    @IBAction func extravadrag(sender: AnyObject) {
         if extravagance.value > 0.75 {
             println("Well met, in honorificabilitudinitatibus, my bedizened associate")
-        }
-        else if extravagance.value > 0.5 {
+        } else if extravagance.value > 0.5 {
             println("Capaciously fancified.")
         }
     }
